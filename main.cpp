@@ -71,7 +71,7 @@ public:
     }
 };
 
-class GoodStudent: public Student {
+class GoodStudent : public Student {
 public:
     GoodStudent(int age, GENDER gender, const string &numberofZachetka, string hobby) : Student(age, gender, numberofZachetka, hobby) {
     }
@@ -141,37 +141,64 @@ int main() {
 
     Specialist JoJo("cynologist", 7);
 
-    Professor Shurik(50, F, "M", "IT-Specialist", 15, 60000);
+    Professor Shurik(50, F, "DOTA 2", "IT-Specialist", 15, 60000);
 
     ProfessorOfANIME Roman(15, 9000);
 
-    cout << "Vasya: " << Vasya.getAge() << endl;
+    cout << "Human Vasya:"<< endl;
+    cout << "  Age: " << Vasya.getAge() << endl;
+    cout << "  Gender: " << Vasya.getGender() << endl;
+    cout << "  Hobby: " << Vasya.getHobby() << endl << endl;
 
-    cout << "Igor: " << Igor.getGender() << endl;
+    cout << "Human Igor:"<< endl;
+    cout << "  Age: " << Igor.getAge() << endl;
+    cout << "  Gender: " << Igor.getGender() << endl;
+    cout << "  Hobby: " << Igor.getHobby() << endl << endl;
 
-    cout << "Masha: " << Masha.getHobby() << endl;
+    cout << "Human Masha:"<< endl;
+    cout << "  Age: " << Masha.getAge() << endl;
+    cout << "  Gender: " << Masha.getGender() << endl;
+    cout << "  Hobby: " << Masha.getHobby() << endl << endl;
 
-    cout << "Olya: " << Olya.getAge() << endl;
-    cout << "Olya: " << Olya.getGender() << endl;
-    cout << "Olya: " << Olya.getnumberofZachetka() << endl;
-    cout << "Olya: " << Olya.getHobby() << endl;
+    cout << "Student Olya:"<< endl;
+    cout << "  Age: " << Olya.getAge() << endl;
+    cout << "  Gender: " << Olya.getGender() << endl;
+    cout << "  Number of zachetka: " << Olya.getnumberofZachetka() << endl;
+    cout << "  Hobby: " << Olya.getHobby() << endl << endl;
 
-    cout << "Fedya: " << Fedya.getHobby() << endl;
+    cout << "Bad student Fedya:"<< endl;
+    cout << "  Age: " << Fedya.getAge() << endl;
+    cout << "  Gender: " << Fedya.getGender() << endl;
+    cout << "  Number of zachetka: " << Fedya.getnumberofZachetka() << endl;
+    cout << "  Hobby: " << Fedya.getHobby() << endl << endl;
 
-    cout << "Misha: " << Misha.getHobby() << endl;
+    cout << "Good student Misha:"<< endl;
+    cout << "  Age: " << Misha.getAge() << endl;
+    cout << "  Gender: " << Misha.getGender() << endl;
+    cout << "  Number of zachetka: " << Misha.getnumberofZachetka() << endl;
+    cout << "  Hobby: " << Misha.getHobby() << endl << endl;
 
-    cout << "JoJo: " << JoJo.getProfession() << endl;
-    cout << "JoJo: " << JoJo.getExperience() << endl;
+    cout << "Specialist JoJo:"<< endl;
+    cout << "  Profession: " << JoJo.getProfession() << endl;
+    cout << "  Experience: " << JoJo.getExperience() << endl << endl;
 
-    cout << "Shurik: " << Shurik.getProfession() << endl;
-    cout << "Shurik: " << Shurik.getExperience() << endl;
-    cout << "Shurik: " << Shurik.getnumberofZachetka() << endl;
+    cout << "Professor Shurik:"<< endl;
+    cout << "  Profession: " << Shurik.getProfession() << endl;
+    cout << "  Experience: " << Shurik.getExperience() << endl;
+    cout << "  Salary: " << Shurik.getSalary() << endl;
+    cout << "  Number of zachetka: " << Shurik.getnumberofZachetka() << endl;
+    cout << "  Age: " << Shurik.getAge() << endl;
+    cout << "  Gender: " << Shurik.getGender() << endl;
+    cout << "  Hobby: " << Shurik.getHobby() << endl  << endl;
 
-    cout << "Roman: " << Roman.getProfession() << endl;
-    cout << "Roman: " << Roman.getGender() << endl;    // так не работает
-    cout << "Roman: " << Roman.getnumberofZachetka() << endl;    // так не работает
-    cout << "Roman: " << Roman.getHobby() << endl;    // так не работает
-    cout << "Roman: " << Roman.getSalary() << endl;
+    cout << "Professor Of anime Roman:"<< endl;
+    cout << "  Profession: " << Roman.getProfession() << endl;
+    cout << "  Experience: " << Roman.getExperience() << endl;
+    cout << "  Salary: " << Roman.getSalary() << endl;
+    cout << "  Age: " << ((BadStudent)Roman).getAge() << endl;
+    cout << "  Gender: " << ((BadStudent)Roman).getGender() << endl;
+    cout << "  Number of zachetka: " << ((BadStudent)Roman).getnumberofZachetka() << endl;
+    cout << "  Hobby: " << ((BadStudent)Roman).getHobby() << endl;
 
     return 0;
 }
